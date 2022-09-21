@@ -40,11 +40,16 @@ public class Kor {
     private static int randomGeneralas(int n){return (int) (Math.random() * (2 * n + 1)) - n;}
 
     public double kerulet(){
-        return 2*r*Math.PI;}
+        return 2*Math.abs(r)*Math.PI;}
     public double terulet(){
         return Math.pow(r, 2)*Math.PI;
     }
+    
 
+    @Override
+    public String toString(){
+        return String.format("(%d,%d,%d)",this.x,this.y,this.r);
+    }
 
 
 

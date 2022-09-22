@@ -17,6 +17,9 @@ public class Feladat2 {
         Kor kor10 = new Kor(10);
 
 
+
+
+
         System.out.printf("1. kör: %s, kerülete: %.3f, területe: %.3f\n",kor1, kor1.kerulet(), kor1.terulet());
         System.out.printf("2. kör: %s, kerülete: %.3f, területe: %.3f\n",kor2,kor2.kerulet(), kor2.terulet());
         System.out.printf("3. kör: %s, kerülete: %.3f, területe: %.3f\n",kor3,kor3.kerulet(), kor3.terulet());
@@ -29,6 +32,15 @@ public class Feladat2 {
         System.out.printf("10. kör: %s, kerülete: %.3f, területe: %.3f\n",kor10,kor10.kerulet(), kor10.terulet());
 
 
-
+        int index = 0;
+        int max = 0;
+        Kor[] sugarak = new Kor[]{kor1,kor2,kor3,kor4,kor5,kor6,kor7,kor8,kor9,kor10};
+        for (int i = 0; i < sugarak.length; i++) {
+            if (max < sugarak[i].getR()){
+                max = sugarak[i].getR();
+                index = i;
+            }
+        }
+        System.out.printf("A legnagyobb a(z) %d. kör", index);
     }
 }

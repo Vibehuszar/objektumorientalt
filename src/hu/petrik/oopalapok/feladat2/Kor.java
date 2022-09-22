@@ -44,6 +44,7 @@ public class Kor {
     public double terulet(){
         return Math.pow(r, 2)*Math.PI;
     }
+
     
 
     @Override
